@@ -11,7 +11,7 @@ for i in range(columns):
     for j in range(rows):
         if not arr[i][j].isnumeric() and arr[i][j].strip() != ".":
             up = down = False
-            if j-1 >= 0 and arr[i][j-1].isnumeric():
+            if j-1 >= 0 and arr[i][j-1].isnumeric(): #direct left
                 add = 1
                 while j-add >= 0 and arr[i][j-add] != ".":
                     num += arr[i][j-add]
@@ -20,7 +20,7 @@ for i in range(columns):
                 print(num)
                 total += int(num)
                 num = ""
-            if j+1 <= 139 and arr[i][j+1].isnumeric():
+            if j+1 <= 139 and arr[i][j+1].isnumeric(): #direct right
                 add = 1
                 while j+add <= 139 and arr[i][j+add] != ".":
                     num += arr[i][j+add]
@@ -28,7 +28,7 @@ for i in range(columns):
                 print(num)
                 total += int(num)
                 num = ""
-            if i-1 >= 0 and arr[i-1][j].isnumeric():
+            if i-1 >= 0 and arr[i-1][j].isnumeric(): #direct up
                 add = 1
                 num += arr[i-1][j]
                 while j-add >= 0 and arr[i-1][j-add] != ".":
@@ -43,7 +43,7 @@ for i in range(columns):
                 total += int(num)
                 num = ""
                 up = True
-            if i+1 <= 139 and arr[i+1][j].isnumeric():
+            if i+1 <= 139 and arr[i+1][j].isnumeric(): #direct down
                 add = 1
                 num += arr[i+1][j]
                 while j-add >= 0 and arr[i+1][j-add] != ".":
@@ -58,7 +58,7 @@ for i in range(columns):
                 total += int(num)
                 num = ""
                 down = True
-            if i-1 >= 0 and j - 1 >= 0 and arr[i-1][j - 1].isnumeric() and not up:
+            if i-1 >= 0 and j - 1 >= 0 and arr[i-1][j - 1].isnumeric() and not up: #up left
                 add = 1
                 while j-add >= 0 and arr[i-1][j-add] != ".":
                     num += arr[i-1][j-add]
@@ -67,7 +67,7 @@ for i in range(columns):
                 print(num)
                 total += int(num)
                 num = ""
-            if i+1 <= 139 and j - 1 >= 0 and arr[i+1][j - 1].isnumeric() and not down:
+            if i+1 <= 139 and j - 1 >= 0 and arr[i+1][j - 1].isnumeric() and not down: #down left
                 add = 1
                 while j-add >= 0 and arr[i+1][j-add] != ".":
                     num += arr[i+1][j-add]
@@ -76,7 +76,7 @@ for i in range(columns):
                 print(num)
                 total += int(num)
                 num = ""
-            if i+1 <= 139 and j+1 <= 139 and arr[i+1][j + 1].isnumeric() and not down:
+            if i+1 <= 139 and j+1 <= 139 and arr[i+1][j + 1].isnumeric() and not down: #down right
                 add = 1
                 while j+add <= 139 and arr[i+1][j+add] != ".":
                     num += arr[i+1][j+add]
@@ -84,7 +84,7 @@ for i in range(columns):
                 print(num)
                 total += int(num)
                 num = ""
-            if i-1 >= 0 and j+1 <= 139 and arr[i-1][j + 1].isnumeric() and not up:
+            if i-1 >= 0 and j+1 <= 139 and arr[i-1][j + 1].isnumeric() and not up: #up right
                 add = 1
                 while j+add <= 139 and arr[i-1][j+add] != ".":
                     num += arr[i-1][j+add]
