@@ -10,7 +10,6 @@ for line in arr:
     for num in nums:
         if num in key:
             count = count+1
-    print(count)
     if count >= 1:
         total += 2**(count - 1)
     count = 0

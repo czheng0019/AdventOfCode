@@ -12,7 +12,6 @@ for line in arr:
     for num in nums:
         if num in key:
             count = count + 1
-    print(count)
     if count >= 1:
         for i in range(1, count+1):
             values[index + i] = values[index + i] + values[index]
