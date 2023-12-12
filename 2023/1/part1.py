@@ -1,5 +1,5 @@
 count = i = 0
-str = last = ""
+strg = last = ""
 arr = []
 with open("input.txt", "r") as f:
     for line in f:
@@ -9,12 +9,12 @@ for line in arr:
     for c in line:
         if c.isnumeric():
             if i == 0:
-                str += c
+                strg += c
             last = c
             i = i+1
-    str += last
-    count += int(str)
-    str = ""
+    strg += last
+    count += int(strg)
+    strg = ""
     i = 0
 
 print(count)

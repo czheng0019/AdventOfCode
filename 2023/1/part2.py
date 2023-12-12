@@ -22,7 +22,7 @@ for line in arr:
             if i == 0:
                 first = c
             last = c
-            i = i+1
+            i = i + 1
     for num in nums:
         if line.count(num) >= 1:
             if line.index(num) < line.index(first):
