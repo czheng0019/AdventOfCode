@@ -33,9 +33,9 @@ for line in arr:
         first = nums.get(first)
     if last in nums:
         last = nums.get(last)
-    str += first
-    str += last
-    count += int(str)
+    strg += first
+    strg += last
+    count += int(strg)
     strg = ""
     i = 0
 
