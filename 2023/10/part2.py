@@ -62,4 +62,3 @@ for tup in side:
         prev = i[1]
 
 print(count)
-
