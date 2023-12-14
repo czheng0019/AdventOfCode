@@ -1,4 +1,4 @@
-farr = []
+arr = []
 history = []
 side = []
 end = 0
